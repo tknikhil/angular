@@ -1,6 +1,6 @@
 import { FormControl } from "@angular/forms";
 
-//just to check git
+//second attempt to check git commit
 export class CustomeValidator{
 // static required(c:FormControl): StringMap<string,boolean>{
 //     return isBlank(c.value)||c.value==""?{required:true}:null;
