@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import {UserserviceService} from '../userservice.service';
+import {UserserviceService} from '../service/userservice.service';
 @Component({
   selector: 'app-product-ng-module',
   templateUrl: './product-ng-module.component.html',

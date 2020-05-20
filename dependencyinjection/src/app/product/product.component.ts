@@ -1,5 +1,5 @@
 import { Component, OnInit, ReflectiveInjector } from '@angular/core';
-import { UserserviceService } from '../userservice.service';
+import { UserserviceService } from '../service/userservice.service';
 
 @Component({
   selector: 'app-product',

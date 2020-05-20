@@ -5,18 +5,26 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { ProductNgModuleComponent } from './product-ng-module/product-ng-module.component';
 
-import {UserserviceService} from './userservice.service';
+import{ProductNgModule} from './product-ng-module/product-ng-module.module';
+import{AnalyticDemoModule} from './analytic-demo/analytic-demo.module';
+
+import { AnalyticDemoComponent } from './analytic-demo/analytic-demo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    ProductNgModuleComponent
+    ProductNgModuleComponent,
+    AnalyticDemoComponent
   ],
+
+  // Register here every specific Module
   imports: [
-    BrowserModule
+    BrowserModule,
+    ProductNgModule,
+    AnalyticDemoModule
   ],
-  providers: [UserserviceService],//<--this is 2nd method
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
