@@ -22,6 +22,40 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
+## Comparison Book
+In book they are using bootstrap and bootstrap sass so you have to install that
+
+npm install bootstrap/bootstrap sass --save 
+
+for bootstrap you might get error of dependency jar like jquery so install that also
+
+npm install jquery --save
+
+In book they have use saperate Scss file but I have register file directly in angular.json
+"styles": [
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "src/styles.css"
+            ]
+            
+ if you want to use saperate scss fil then do following steps
+ 1. Creating Angular application with SCSS style files.
+    
+    ng new my-first-app --style=scss
+ 
+ 2. Converting existing Angular CSS project to SCSS style sheet.
+ 
+     ng config schematics.@schematics/angular:component.styleext scss  
+     
+     or in angular.jason copy paste this code
+     
+     "schematics": {
+      "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+}
+ 
+ then install bootstrap.
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
