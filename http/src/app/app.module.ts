@@ -6,11 +6,15 @@ import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SimpleHttpComponent } from './simple-http/simple-http.component';
+import { YoutubeSearchComponent } from './youtube-search/youtube-search.component';
+
+import {youTubeSesrchInjectables} from './youtube-search/youtube-search.injectables'
 
 @NgModule({
   declarations: [
     AppComponent,
-    SimpleHttpComponent
+    SimpleHttpComponent,
+    YoutubeSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +22,7 @@ import { SimpleHttpComponent } from './simple-http/simple-http.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [youTubeSesrchInjectables],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
