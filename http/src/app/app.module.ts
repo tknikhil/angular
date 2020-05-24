@@ -11,6 +11,7 @@ import { YoutubeSearchComponent } from './youtube-search/youtube-search.componen
 import {youTubeSearchInjectables} from './youtube-search/youtube-search.injectables';
 import { SearchBoxComponent } from './youtube-search/search-box/search-box.component';
 import{SearchResultComponent} from './youtube-search/search-result/search-result.component';
+import { MoreHttpRequestComponent } from './more-http-request/more-http-request.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import{SearchResultComponent} from './youtube-search/search-result/search-result
     YoutubeSearchComponent,
     SearchBoxComponent,
     SearchResultComponent,
+    MoreHttpRequestComponent,
 
   ],
   imports: [

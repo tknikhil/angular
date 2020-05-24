@@ -6,7 +6,7 @@ import { SearchResult } from '../youtube-search/search-result.model';
 import { map } from 'rxjs/operators';
 
 
-export const YOUTUBE_API_KEY="AIzaSyDtTgbziM1YAHilNLQpjyj7QrSnBY3Ti00";
+export const YOUTUBE_API_KEY="For security I am not attaching API key to Generate your API key Read README file";
 export const YOUTUBE_API_URL="https://www.googleapis.com/youtube/v3/search";
 
 @Injectable()
