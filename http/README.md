@@ -56,6 +56,23 @@ In book they have use saperate Scss file but I have register file directly in an
  
  then install bootstrap.
 
+
+ ## Generating Youtube API Key
+ 
+ 1. Go to console.cloud.google.com
+ 2. Right beside Google Cloud Platform name there is drop down select that and Create new Project.
+ 3. Click on the Library which is on right side pannel and select Youtube Data API V3 from left side pannel
+ 4. Select the enable button.
+ 5. Now you have to create credential by clicking button Create Credential
+ 6. Now you will get Interface which having some credential like:
+      1. Which API are you using?
+        select Youtube Data API V3
+      2. Where will you be calling this API from?
+        select Web Browser (JavaScript) 
+      3. What data will you be accessing
+        select public data
+7.  API key will get generated copy that key and use it in your Code press done button 
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
