@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
-import { RequestOptions } from 'https';
+import { HttpClient, HttpHeaders, HttpRequest} from '@angular/common/http';
+
 
 @Component({
   selector: 'app-more-http-request',
@@ -23,29 +23,29 @@ export class MoreHttpRequestComponent implements OnInit {
                         body:'bar',
                         title:'foo',
                         userId:1
-                      })).subscribe((res:Response)=>{
-                        this.data=res.json();
+                      })).subscribe(data=>{
+                       this.data=data;
                         this.loading=false;
                       });
   }
 
   makeDelete():void{
     this.loading=true;
-    this.http.delete('http://jsonplaeholder.typicode.com/posts/1')
-                      .subscribe((res:Response)=>{
-                        this.data=res.json();
+    this.http.delete('http://jsonplaceholder.typicode.com/posts/1')
+                      .subscribe(data=>{
+                        this.data=data;
                         this.loading=false;
                       });
   }
 
   makeHeaders():void{
-   const header=new HttpHeaders().append('X-API-TOKEN', 'ng-book');
+   const headers:HttpHeaders=new HttpHeaders({'X-API-TOKEN': 'ng-book'});
    
-   this.http.get('http://jsonplaeholder.typicode.com/posts/1',{header})
-                      .subscribe((res:Response)=>{
-                          this.data=res.json();
-                      });
-
-  }
-
+ const req=new HttpRequest('GET','http://jsonplaceholder.typicode.com/posts/1',{
+   headers:headers
+ });
+ this.http.request(req).subscribe(data=>{
+   this.data=data['body'];
+ });
+}
 }
